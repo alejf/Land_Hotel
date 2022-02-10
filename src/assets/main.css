@@ -1,7 +1,30 @@
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../assets/static/Montserrat-Regular.ttf');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../assets/static/Montserrat-Bold.ttf');
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: 'Abel';
+    src: url('../assets/static/Abel-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'RobotoMono';
+    src: url('../assets/static/RobotoMono-Regular.ttf');
+}
+
 *{
     margin: 0;  
     padding: 0;
 }
+
 
 body{
     display: grid;
@@ -16,11 +39,202 @@ header{
     background-size: cover;
     height: 1090px;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr;
-    grid-template-areas: "logo menu";
-    align-items: center;
-    justify-items: center;
+ 
     padding: 0;
     margin: 0;
 }
+
+nav ul {
+    display: flex;
+    list-style: none;
+    font-size: 1.8rem;
+    float: right;
+    padding: 31px;
+    font-family: 'Montserrat';   
+    font-weight: bold;
+    
+    
+   
+    
+  }
+  
+nav ul li {
+    margin-right: 92px;
+   
+    
+  }
+
+a{
+    text-decoration: none;
+    color: #fff;
+   
+   
+    
+}
+
+.logo{
+    position: absolute;
+    left: 10.76%;
+    right: 73.28%;
+    top: 0.03%;
+    bottom: 95.56%;
+    background: #D4B499;
+    border: 1px solid #889EAF;
+    height: 110px;
+    border-radius: 0% 0% 22px 22px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    text-align:center;
+    font-family: 'Abel';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    letter-spacing: 0.25em;
+    color: #14274A;
+}
+
+.sub{
+    text-align:center;
+    font-size: 18px;
+    line-height: 19px;
+    letter-spacing: 0.7em;
+    color: #14274A;
+   
+   
+   
+    }
+
+.bienvenida{
+    position: absolute;
+    padding: 15%;
+    top: -48px;
+    text-align: left;
+    font-size: 58px;
+    font-family: 'Montserrat';
+    color: #fff;
+}
+
+.subH{
+    text-align: left;
+    font-size: 154px;
+    font-family: 'RobotoMono';
+    color: #fff;
+}
+
+.subH p{
+    font-family: Abel;
+    font-size: 69px;
+    line-height: 76px;
+    letter-spacing: 0.4em;
+}
+
+.textobanner{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 35px;
+    letter-spacing: 0.1em;
+}
+
+
+.reservacion_btn{
+    position: absolute;
+    top: 80%;
+    left: 45%;
+    width: 270px;
+    height: 68px;
+    
+    background: #D4B499;
+    border: none;
+    border-radius: 10px;
+    line-height: 30px;
+    text-align: center;
+    
+    color: #fff;
+    font-family: 'Montserrat';
+    font-size: large;
+    font-weight: bold;
+    object-fit: contain;
+}
+
+.intro{
+    display: grid;
+    font-family: Montserrat;
+    font-size: 36px;
+    line-height: 44px;
+    justify-content: center;
+    padding: 4%;
+
+
+    color: #14274A;
+
+
+}
+
+.contenido{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+    "a  b"
+    "a  b";
+    align-items: start;
+    padding: 10%;
+   
+    grid-auto-rows: 100px;
+    font-family: Montserrat;
+    font-size: 36px;
+    line-height: 44px;
+    justify-content: center;
+    color: #14274A;
+}
+
+.contenido1{
+    grid-area: a;
+    align-self: center;
+    justify-self: center;
+}
+
+.contenido2{
+    grid-area: b;
+    align-self: center;
+    justify-self: center;
+}
+
+footer{
+    display: grid;
+    background: #889EAF;
+    grid-template-columns: repeat(3, 1fr);
+    height: 160px;
+    grid-template-areas:
+    "a  b c";
+    align-items: center;
+    color: #fff;
+
+}
+
+.contenidoa{
+    grid-area: a;
+    align-self: left;
+    justify-self: center;
+}
+
+.contenidob{
+    grid-area: b;
+    align-self: center;
+    justify-self: center;
+
+}
+
+.contenidoc{
+    grid-area: c;
+    align-self: center;
+    justify-self: center;
+}
+.triangulo { 
+    margin: 0 auto;
+    width: 0; 
+    height: 0; 
+    border-left: 45px solid transparent; 
+    border-right: 45px solid transparent; 
+    border-bottom: 35px solid  #889EAF;; 
+} 
+
