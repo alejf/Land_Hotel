@@ -1,0 +1,30 @@
+{
+  "name": "hotel",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alejf/Land_Hotel.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alejf/Land_Hotel/issues"
+  },
+  "homepage": "https://github.com/alejf/Land_Hotel#readme",
+  "dependencies": {
+    "assert-plus": "^1.0.0",
+    "axios": "^0.26.0",
+    "body-parser": "^1.19.2",
+    "express": "^4.17.2",
+    "hbs": "^4.2.0",
+    "nodemon": "^2.0.15",
+    "path": "^0.12.7"
+  }
+}

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/bar.css">
+   
+    <title>Huxyaca Hotel</title>
+</head>
+<body>
+
+
+    
+    <header>
+        <nav> 
+            <ul>
+                <li>
+                    <a href="index.html">Inicio</a>
+                </li>
+                <li>
+                    <a href="habitaciones.html">Habitaciones</a>
+                </li>
+                <li>
+                    <a href="bar.html">Bar</a>
+                </li>
+                <li>
+                    <a href="Opiniones.html">Opiniones</a>
+                </li>
+            </ul>
+        
+        </nav>
+        <div class="logo">
+            Huxyaca
+             <div class="sub">
+                  HOTEL
+             </div>
+        </div>
+        
+        <div class="bienvenida">
+
+        
+            Bienvenido a  
+            <div class="subH">
+                Huxyaca 
+                <p>HOTEL</p>
+            </div>
+            <div class="textobanner">
+                Reserva tu estancia y disfruta de <br> lo que Oaxaca te ofrece
+            </div>
+              
+        </div>
+        <button class="reservacion_btn">
+            <img src="./assets/img/calendario.png" alt="¡Reserva ya!" srcset="">
+            
+
+        </button>
+
+       
+    </header>
+    
+    <section>
+        <article>
+            
+            <div class="intro"><h3>Bar</h3><br> Uno de los sitios emblematicos dentro de nuestro hotel es el bar, sientete en libertad de escoger el ménu
+                 de nuestras bebidas y conocer sus ingredientes. </div>
+        </article> 
+        <article>
+            <h3>Bebidas con alcohol</h3>
+           <div class="contenidoBar"> 
+              
+                <div class="contenido1">
+                
+                <h4>
+                    Nuestras habitaciones
+                </h4> Nuestras habitaciones estan cargadas  de
+                un toque moderno, e inspiradas para darte 
+                la mejor comodidad durante tu estancia.
+                <br>
+                <button>
+                    <a href="habitaciones.html">Ver mas</a>
+                </button>
+                
+                </div>  
+                
+                <div class="contenido2">
+            
+                    <img width="900" src="./assets/img/habitacion2.jpg" alt="Habitacion 2">
+                
+                   
+                 </div>
+         
+              </div>
+            
+        </article>
+        
+        <article>
+            <div class="contenido"> 
+                <div class="contenido1">
+           
+            
+                    <h3>
+                        Vive Oaxaca
+                    </h3>
+                   
+                        Nos encontramos en el centro de la ciudad de Oaxaca,
+                        donde podras disfrutar de la mejor gastronomia,
+                        y una gran variedad de actividades para realizar.
+            
+
+                       
+                    </div>
+                    <div class="contenido2">
+                    <p>
+                        <img width="900" src="./assets/img/oaxaca1.jpg" alt="Oaxaca">
+                    </p>
+                    <button>
+                        <a href="habitaciones.html">Ver mas</a>
+                    </button>
+                    </div>
+            
+            </div>
+        
+        </article>
+
+    
+
+            </section>
+            <section>
+                <div class="opinion">
+                
+                
+                
+                   <div class="oph">Opiniones </div> 
+                
+                <p>
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum"
+                    </p>
+
+                </div>
+            </section>
+            <div class="triangulo"></div> 
+            <footer >
+                <div class="contenidoa">
+
+                
+                    <h3>
+                        Huxyaca Hotels
+                     </h3>
+                    Andador Turistico, <br>
+                    Col. Centro.    <br>
+                    Oaxaca de Juarez, Oax. <br>
+                    h_oaxaca@huxyaca.com
+                </div>
+
+
+                <div class="contenidob">
+                    Mapa de sitio
+
+                    <p>
+                        <a href="index.html">Inicio</a><br>
+                        <a href="habitaciones.html">Habitaciones</a><br>
+                        <a href="bar.html">Bar</a>
+                        <a href="opiniones.html">Opiniones</a>
+
+                    </p>
+                </div>
+                <div class="contenidoc">
+                    <img src="./assets/img/facebook.png" alt="Facebook">Facebook<br>
+                    <img src="./assets/img/twitter.png" alt="Twitter">Twitter<br>
+                    <img src="./assets/img/instagram.png" alt="Instagram">Instagram
+                </div>
+            </footer>
+
+            <script>
+                let URI = 'https://www.7timer.info/bin/api.pl?lon=-96.704&lat=17.017&product=civillight&output=json';
+
+                fetch(URI)
+                .then(response => response.json())
+                .then(json => {
+                    
+                let temperatura = json.dataseries[0].weather +' \nCon temperaturas: ' + json.dataseries[0].temp2m.max+ '°C Max' + ' y ' + json.dataseries[0].temp2m.min+ '°C Min'; 
+               
+                
+                document.getElementById('temp').innerText = `${temperatura}`;
+                })
+                .catch(error => {
+                    console.error(error);
+                    console.log(`Error al intentar la solicitud: ${error.message}`);
+                    document.getElementById('temp').innerText = '<Valor por defecto>';
+                });
+                </script>
+               
+</body>
+</html>

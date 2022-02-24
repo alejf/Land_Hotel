@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/main.css">
+   
     <title>Huxyaca Hotel</title>
 </head>
 <body>
@@ -21,7 +22,7 @@
                     <a href="habitaciones.html">Habitaciones</a>
                 </li>
                 <li>
-                    <a href="bar.html">Bar</a>
+                    <a href="bar">Bar</a>
                 </li>
                 <li>
                     <a href="Opiniones.html">Opiniones</a>
@@ -54,6 +55,8 @@
             
 
         </button>
+
+        <div class="apitemp">El clima hoy en Oaxaca de Juárez es:  <large id="temp"></large></div>
     </header>
     
     <section>
@@ -115,16 +118,22 @@
             </div>
         
         </article>
+
     
 
             </section>
             <section>
-                <h2>
-                    Opiniones
-                </h2>
+                <div class="opinion">
+                
+                
+                
+                   <div class="oph">Opiniones </div> 
+                
                 <p>
                     "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum"
                     </p>
+
+                </div>
             </section>
             <div class="triangulo"></div> 
             <footer >
@@ -149,6 +158,7 @@
                         <a href="habitaciones.html">Habitaciones</a><br>
                         <a href="bar.html">Bar</a>
                         <a href="opiniones.html">Opiniones</a>
+                        <a href="intranet">Opiniones</a>
 
                     </p>
                 </div>
@@ -158,5 +168,25 @@
                     <img src="./assets/img/instagram.png" alt="Instagram">Instagram
                 </div>
             </footer>
+
+            <script>
+                let URI = 'https://www.7timer.info/bin/api.pl?lon=-96.704&lat=17.017&product=civillight&output=json';
+
+                fetch(URI)
+                .then(response => response.json())
+                .then(json => {
+                    
+                let temperatura = json.dataseries[0].weather +' \nCon temperaturas: ' + json.dataseries[0].temp2m.max+ '°C Max' + ' y ' + json.dataseries[0].temp2m.min+ '°C Min'; 
+               
+                
+                document.getElementById('temp').innerText = `${temperatura}`;
+                })
+                .catch(error => {
+                    console.error(error);
+                    console.log(`Error al intentar la solicitud: ${error.message}`);
+                    document.getElementById('temp').innerText = '<Valor por defecto>';
+                });
+                </script>
+               
 </body>
 </html>

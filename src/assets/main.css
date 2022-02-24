@@ -1,23 +1,23 @@
 @font-face {
     font-family: 'Montserrat';
-    src: url('../assets/static/Montserrat-Regular.ttf');
+    src: url('../../src/assets/img/static/Montserrat-Regular.ttf');
     font-weight: normal;
 }
 
 @font-face {
     font-family: 'Montserrat';
-    src: url('../assets/static/Montserrat-Bold.ttf');
+    src: url('../../src/assets/img/static/Montserrat-Bold.ttf');
     font-weight: bold;
 }
 
 @font-face {
     font-family: 'Abel';
-    src: url('../assets/static/Abel-Regular.ttf');
+    src: url('../../src/assets/img/static/Abel-Regular.ttf');
 }
 
 @font-face {
     font-family: 'RobotoMono';
-    src: url('../assets/static/RobotoMono-Regular.ttf');
+    src: url('../../src/assets/img/static/RobotoMono-Regular.ttf');
 }
 
 *{
@@ -71,6 +71,22 @@ a{
    
     
 }
+a:hover {
+    border-bottom: 3px solid;
+    text-decoration: solid;
+    color: #fff;
+}
+
+a:focus{
+    border-bottom: 3px solid;
+    text-decoration: solid;
+    color: #fff;
+}
+a:current{
+    border-bottom: 3px solid;
+    text-decoration: solid;
+    color: #fff;
+}
 
 .logo{
     position: absolute;
@@ -120,6 +136,16 @@ a{
     color: #fff;
 }
 
+
+.apitemp{
+    position: fixed;
+    top: 22%;
+    left: 65%;
+    color: beige;
+    font-size: 20px;
+   
+    
+}
 .subH p{
     font-family: Abel;
     font-size: 69px;
@@ -199,6 +225,16 @@ a{
     justify-self: center;
 }
 
+.opinion{
+    margin: 0 auto;
+    width: 75%; 
+    height: 22; 
+    font-family: Montserrat;
+    font-size: 26px;
+    color: #14274A;
+    padding: 6%;
+}
+
 footer{
     display: grid;
     background: #889EAF;
@@ -238,3 +274,9 @@ footer{
     border-bottom: 35px solid  #889EAF;; 
 } 
 
+ .oph{
+ display: grid;
+ justify-content: center;
+ font-family: 'Abel';
+ font-size: 43px;
+}
