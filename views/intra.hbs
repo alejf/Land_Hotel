@@ -1,122 +1,62 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/bar.css">
-   
-    <title>Huxyaca Hotel</title>
+    <link rel="stylesheet" href="./assets/intra.css">
+    <title>Intranet</title>
 </head>
 <body>
 
 
-    
-    <header>
-        <nav> 
+    <div class="wrapper">
+        <header class="main-head"> <title >Huxyaca Hotel</title></header>
+        <nav class="main-nav">
             <ul>
-                <li>
-                    <a href="index.html">Inicio</a>
-                </li>
-                <li>
-                    <a href="habitaciones.html">Habitaciones</a>
-                </li>
-                <li>
-                    <a href="bar">Bar</a>
-                </li>
-                <li>
-                    <a href="Opiniones.html">Opiniones</a>
-                </li>
+                <li><a href="">Cuartos</a></li>
+                <li><a href="">Visitantes</a></li>
+                <li><a href="">Opiniones</a></li>
             </ul>
-        
         </nav>
-        <div class="logo">
-            Huxyaca
-             <div class="sub">
-                  HOTEL
-             </div>
-        </div>
-        
-        <div class="bienvenida">
+        <article class="content">
+           {{#each habitaciones}}
 
-        
-            Bienvenido a  
-            <div class="subH">
-                Huxyaca 
-                <p>HOTEL</p>
-            </div>
-            <div class="textobanner">
-                Reserva tu estancia y disfruta de <br> lo que Oaxaca te ofrece
-            </div>
-              
-        </div>
-        <button class="reservacion_btn">
-            <img src="./assets/img/calendario.png" alt="¡Reserva ya!" srcset="">
-            
-
-        </button>
-
-       
-    </header>
-    
-    <section>
-        <article>
-            
-            <div class="intro"><h3>Bar</h3><br> Uno de los sitios emblematicos dentro de nuestro hotel es el bar, sientete en libertad de escoger el ménu
-                 de nuestras bebidas y conocer sus ingredientes. </div>
-        </article> 
-        <article>
-            <h3>Bebidas con alcohol</h3>
-
-          
-           
-         
-
-        
-          
   
-           <div class="contenidoBar"> 
-               {{#each drinks}}
-                <div class="contenido1">
-                 
-                <h4>
-                    {{this.strDrink}}  
-                </h4> 
-               
-                <img width="300" src="{{this.strDrinkThumb}}">
-               
-                <button>
-                    <a href="www.thecocktaildb.com/api/json/v1/1/lookup.php?i={{this.idDrink}}">Ver mas</a>
-                </button> 
+    <div class="container">
+        <div class="cards">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title">{{this.nombre}}</h4>
+                    </div>
+                   
+                        <p>
+                            <strong>Descripción:</strong> {{this.descripcion}}
+                        </p>
+                        <p>
+                            <strong>Precio:</strong> {{this.camas}}
+                        </p>
+                        <p>
+                            <strong>Capacidad:</strong> {{this.huespedes}}
+                        </p>
+                        <p>
+                            <strong>Cuenta con balcon:</strong> {{this.balcon}}
+                        </p>
+                        <p>
+                            <strong>Disponible:</strong> {{this.disponible}}
+                        </p>
+                    <a class="card-link" href="habitaciones/{{this.id}}">Ver detalle <i class="fas fa-arrow-right"></i></a>
+                   
                 </div>
-                 
-                 {{/each}}  
-
-
-              </div>
-           
-        </article>
-        
-        
-
+            </div>
+        </div>
     
+      {{/each}}
 
-            </section>
-            <section>
-                <div class="opinion">
-                
-                
-                
-                   <div class="oph">Opiniones </div> 
-                
-                <p>
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum"
-                    </p>
-
-                </div>
-            </section>
-            <div class="triangulo"></div> 
-            <footer >
+        </article>
+      
+       
+        <footer class="main-footer">
                 <div class="contenidoa">
 
                 
@@ -138,8 +78,7 @@
                         <a href="habitaciones.html">Habitaciones</a><br>
                         <a href="bar.html">Bar</a>
                         <a href="opiniones.html">Opiniones</a>
-                        <a href="intranet">Intranet</a>
-                        
+                        <a href="intranet">Opiniones</a>
 
                     </p>
                 </div>
@@ -148,17 +87,13 @@
                     <img src="./assets/img/twitter.png" alt="Twitter">Twitter<br>
                     <img src="./assets/img/instagram.png" alt="Instagram">Instagram
                 </div>
-            </footer>
+           </footer>
+</div>
+   
 
-         
-               
-</body>
-</html>
-    </div>
+                        
 
-    <footer>
-         <p>&copy; 2021 Edgar Alejandro Jarquin Flores</p>  
-    </footer>
 
+                       
 </body>
 </html>

@@ -71,10 +71,127 @@ app.get('/intranet', (req, res) => {
 
 });
 
+
+app.get('/intra', (req, res) => {
+  const query = req.query;
+  
+
+  /////
+  axios.get('http://127.0.0.1:8082/habitaciones')
+  .then(response => {
+    const apiResponse = response.data;
+  
+   res.render ('intra',{
+    habitaciones: apiResponse.habitaciones
+
+   });
+
+
+    console.log (apiResponse);
+ 
+  }).catch(error => {
+    console.log(error);
+  });
+
+
+
+});
+
 app.get('/temperatura', (req, res) => { 
     res.sendFile(path.join(__dirname, 'temperatura.js'));
 
 });
+
+app.get('/habitaciones', (req, res) => {
+  res.json({
+    habitaciones: [
+      {
+        id: 1,
+        nombre: 'Habitacion 1',
+        descripcion: 'Habitacion 1',
+        camas: '2 individuales',
+        huespedes: 'max 2',
+        balcon: 'si',
+        disponible: 'si',
+
+      },
+      {
+        id: 2,
+        nombre: 'Habitacion 2',
+        descripcion: 'Habitacion 2',
+        camas: '1 Queen',
+        huespedes: 'max 2',
+        balcon: 'no',
+        disponible: 'no',
+      },
+      {
+        id: 3,
+        nombre: 'Habitacion 3',
+        descripcion: 'Habitacion 3',
+        camas: '1 king size',
+        huespedes: 'max 3',
+        balcon: 'no',
+        disponible: 'si',
+      },
+      {
+        id: 4,
+        nombre: 'Habitacion 4',
+        descripcion: 'Habitacion 4',
+        camas: '2 matrimoniales',
+        huespedes: 'max 4',
+        balcon: 'no',
+        disponible: 'no',
+      }
+    ]
+  });
+});
+
+app.get('/habitaciones/:id', (req, res) => {
+  const {id} = req.params;
+  res.json({
+    habitaciones: [
+      {
+        id: 1,
+        nombre: 'Habitacion 1',
+        descripcion: 'Habitacion 1',
+        camas: '2 individuales',
+        huespedes: 'max 2',
+        balcon: 'si',
+        disponible: 'si',
+
+      },
+      {
+        id: 2,
+        nombre: 'Habitacion 2',
+        descripcion: 'Habitacion 2',
+        camas: '1 Queen',
+        huespedes: 'max 2',
+        balcon: 'no',
+        disponible: 'no',
+      },
+      {
+        id: 3,
+        nombre: 'Habitacion 3',
+        descripcion: 'Habitacion 3',
+        camas: '1 king size',
+        huespedes: 'max 3',
+        balcon: 'no',
+        disponible: 'si',
+      },
+      {
+        id: 4,
+        nombre: 'Habitacion 4',
+        descripcion: 'Habitacion 4',
+        camas: '2 matrimoniales',
+        huespedes: 'max 4',
+        balcon: 'no',
+        disponible: 'no',
+      }
+    ]
+  });
+}); 
+
+
 
 
 
