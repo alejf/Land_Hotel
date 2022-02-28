@@ -191,7 +191,29 @@ app.get('/habitaciones/:id', (req, res) => {
   });
 }); 
 
+app.get('/bebida/:id', (req, res) => {
+  const {id} = req.params;
+  console.log(id);
 
+ /////
+ axios.get('https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i='+id)
+ .then(response => {
+   const apiResponse = response.data;
+ // let lugar = apiResponse.location.name;
+  res.render ('bebida',{
+   drinks: apiResponse.drinks
+
+  });
+
+
+   console.log (apiResponse);
+  
+ }).catch(error => {
+   console.log(error);
+ });
+
+
+}); 
 
 
 

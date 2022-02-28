@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{drinks.id}}</title>
+</head>
+<body>
+         <div class="contenidoBar"> 
+               {{#each drinks}}
+                <div class="contenido1">
+                 
+                <h4>
+                    {{this.strDrink}}  
+                </h4> 
+               
+                <img width="300" src="{{this.strDrinkThumb}}">
+               
+                <p>
+                   <h3>{{this.strGlass}}</h3>
+                   Ingrediente1: {{this.strIngredient1}}<br>
+                   Ingrediente2: {{this.strIngredient2}}<br>
+                   Ingrediente3: {{this.strIngredient3}}<br>
+                   Ingrediente4: {{this.strIngredient4}}<br>
+                </p> 
+                <p>
+                    {{this.strInstructions}}
+                </p>
+                </div>
+                 
+                 {{/each}}  
+
+
+              </div>
+</body>
+</html>
